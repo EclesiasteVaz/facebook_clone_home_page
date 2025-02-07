@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CustomCircleAvatar extends StatelessWidget {
-  const CustomCircleAvatar({super.key, this.isActive = false});
+  const CustomCircleAvatar({
+    super.key,
+    this.isActive = false,
+    this.assetImage =
+        "assets/images/460172742_495302919969663_1363714754621751762_n.jpg",
+  });
   final bool isActive;
+  final String assetImage;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -11,9 +18,8 @@ class CustomCircleAvatar extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          const CircleAvatar(
-            backgroundImage: AssetImage(
-                "assets/images/460172742_495302919969663_1363714754621751762_n.jpg"),
+          CircleAvatar(
+            backgroundImage: AssetImage(assetImage),
           ),
           if (isActive)
             const Align(
