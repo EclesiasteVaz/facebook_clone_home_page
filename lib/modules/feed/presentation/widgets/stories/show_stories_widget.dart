@@ -11,9 +11,11 @@ class ShowStoriesWidget extends StatelessWidget {
       color: Colors.white,
       child: SizedBox(
         width: MediaQuery.sizeOf(context).width,
-        height: 250,
+        height: 220,
         child: CarouselView(
           itemExtent: 130,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
           children: [
             CardOfTheUserLocalWidget(),
             CardStoryOfOtherUserWidget(

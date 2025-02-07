@@ -11,7 +11,7 @@ class CardOfTheUserLocalWidget extends StatelessWidget {
         children: [
           SizedBox(
             width: MediaQuery.sizeOf(context).width,
-            height: 150,
+            height: 120,
             child: ColoredBox(color: Colors.grey[200]!),
           ),
           Column(
