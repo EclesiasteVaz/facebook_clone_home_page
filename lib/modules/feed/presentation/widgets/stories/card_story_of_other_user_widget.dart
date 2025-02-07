@@ -1,3 +1,4 @@
+import 'package:facebook_clone/modules/feed/presentation/widgets/stories/card_quantity_stories_of_a_user_widget.dart';
 import 'package:flutter/material.dart';
 
 class CardStoryOfOtherUserWidget extends StatelessWidget {
@@ -21,8 +22,9 @@ class CardStoryOfOtherUserWidget extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(""),
+                CardQuantityStoriesOfAUserWidget(quantity),
                 Text(
                   name,
                   style: const TextStyle(
