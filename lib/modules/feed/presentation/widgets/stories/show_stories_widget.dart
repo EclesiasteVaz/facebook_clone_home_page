@@ -1,3 +1,4 @@
+import 'package:facebook_clone/modules/feed/presentation/widgets/stories/card_story_of_other_user_widget.dart';
 import 'package:flutter/material.dart';
 
 class ShowStoriesWidget extends StatelessWidget {
@@ -5,10 +6,22 @@ class ShowStoriesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.sizeOf(context).width,
-      height: 250,
-      child: ColoredBox(color: Colors.white),
+    return ColoredBox(
+      color: Colors.white,
+      child: SizedBox(
+        width: MediaQuery.sizeOf(context).width,
+        height: 250,
+        child: CarouselView(
+          itemExtent: 130,
+          children: [
+            CardStoryOfOtherUserWidget(
+              assetUrl: "assets/images/IMG-20241026-WA0096.jpg",
+              name: "Ernesto Serão Baptista",
+              quantity: 1,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

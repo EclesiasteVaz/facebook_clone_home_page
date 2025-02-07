@@ -12,10 +12,7 @@ class FeedView extends StatelessWidget {
       body: Column(
         children: [
           const CreateNewPostShourtFormWidget(),
-          Divider(
-            color: Colors.grey[300],
-            height: 3,
-          ),
+          Divider(color: Colors.grey[300], height: 3),
           const ShowStoriesWidget(),
         ],
       ),
