@@ -1,3 +1,4 @@
+import 'package:facebook_clone/modules/feed/presentation/widgets/posts/legend_text_widget.dart';
 import 'package:facebook_clone/src/shared/widgets/custom_circle_avatar.dart';
 import 'package:flutter/material.dart';
 
@@ -6,11 +7,11 @@ class CardPost extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ColoredBox(
+    return ColoredBox(
       color: Colors.white,
       child: Column(
         children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(16.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,13 +50,27 @@ class CardPost extends StatelessWidget {
                   padding: EdgeInsets.only(top: 10.0),
                   child: Row(
                     children: [
-                      Icon(Icons.more_horiz),
-                      Icon(Icons.close),
+                      Icon(Icons.more_horiz, color: Colors.black87),
+                      SizedBox(width: 4),
+                      Icon(Icons.close, color: Colors.black87),
                     ],
                   ),
                 )
               ],
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 8.0, right: 8.0, bottom: 16, top: 0),
+            child: LegendTextWidget(
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit rerum, omnis dolorem quae similique ipsam sequi vero! Expedita voluptatibus, quam enim, quisquam perspiciatis tenetur hic repellat numquam consectetur dolorum cumque!",
+            ),
+          ),
+          Image.asset(
+            "assets/images/460172742_495302919969663_1363714754621751762_n.jpg",
+            width: MediaQuery.sizeOf(context).width,
+            height: 400,
+            fit: BoxFit.cover,
           )
         ],
       ),
