@@ -1,3 +1,4 @@
+import 'package:facebook_clone/modules/feed/presentation/widgets/stories/card_of_the_user_local_widget.dart';
 import 'package:facebook_clone/modules/feed/presentation/widgets/stories/card_story_of_other_user_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class ShowStoriesWidget extends StatelessWidget {
         child: CarouselView(
           itemExtent: 130,
           children: [
+            CardOfTheUserLocalWidget(),
             CardStoryOfOtherUserWidget(
               assetUrl: "assets/images/IMG-20241026-WA0096.jpg",
               name: "Ernesto Serão Baptista",
