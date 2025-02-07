@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: const ScrollBehavior(),
       restorationScopeId: 'app',
       localizationsDelegates: const [
         AppLocalizations.delegate,

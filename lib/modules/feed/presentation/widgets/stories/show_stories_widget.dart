@@ -3,27 +3,55 @@ import 'package:facebook_clone/modules/feed/presentation/widgets/stories/card_st
 import 'package:flutter/material.dart';
 
 class ShowStoriesWidget extends StatelessWidget {
-  const ShowStoriesWidget({super.key});
+  ShowStoriesWidget({super.key});
+
+  final stories = [
+    {
+      "username": "Eclesiaste Vaz",
+      "quantity": 3,
+      "assetUrl": "assets/images/IMG-20250117-WA0015.jpg"
+    },
+    {
+      "username": "Ernesto Serão Baptista",
+      "quantity": 1,
+      "assetUrl": "assets/images/IMG-20241026-WA0096.jpg"
+    },
+    {
+      "username": "Bernardo Nevongué",
+      "quantity": 1,
+      "assetUrl":
+          "assets/images/457868246_484911697675452_6579548979262305135_n.jpg"
+    }
+  ];
 
   @override
   Widget build(BuildContext context) {
+    final listStories = List<Widget>.generate(
+      stories.length,
+      (index) {
+        final assetUrl = stories[index]["assetUrl"] as String;
+        final name = stories[index]["username"] as String;
+        final quantity = stories[index]["quantity"] as int;
+        return CardStoryOfOtherUserWidget(
+            assetUrl: assetUrl, name: name, quantity: quantity);
+      },
+    );
+
+    listStories.insert(0, const CardOfTheUserLocalWidget());
+
     return ColoredBox(
       color: Colors.white,
-      child: SizedBox(
-        width: MediaQuery.sizeOf(context).width,
-        height: 220,
-        child: CarouselView(
-          itemExtent: 130,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          children: [
-            CardOfTheUserLocalWidget(),
-            CardStoryOfOtherUserWidget(
-              assetUrl: "assets/images/IMG-20241026-WA0096.jpg",
-              name: "Ernesto Serão Baptista",
-              quantity: 1,
-            ),
-          ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4.0),
+        child: SizedBox(
+          width: MediaQuery.sizeOf(context).width,
+          height: 220,
+          child: CarouselView(
+            itemExtent: 130,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            children: listStories,
+          ),
         ),
       ),
     );
