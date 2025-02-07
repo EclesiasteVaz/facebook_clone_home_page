@@ -42,11 +42,10 @@ class _HomeViewState extends State<HomeView> {
           bottom: TabBar(
             indicator: const BoxDecoration(color: Colors.transparent),
             tabs: [
-              Image.asset(
-                "assets/icons/Captura de ecrã de 2025-02-07 10-47-58.png",
-                width: iconTabSize,
-                height: iconTabSize,
-                fit: BoxFit.fill,
+              const Icon(
+                Icons.home_rounded,
+                size: 35,
+                color: Color.fromARGB(255, 9, 115, 202),
               ),
               Image.asset(
                 "assets/icons/Captura de ecrã de 2025-02-07 10-47-58.png",
@@ -55,19 +54,19 @@ class _HomeViewState extends State<HomeView> {
                 fit: BoxFit.fill,
               ),
               Image.asset(
-                "assets/icons/Captura de ecrã de 2025-02-07 10-47-58.png",
+                "assets/icons/Captura de ecrã de 2025-02-07 10-48-13.png",
                 width: iconTabSize,
                 height: iconTabSize,
                 fit: BoxFit.fill,
               ),
               Image.asset(
-                "assets/icons/Captura de ecrã de 2025-02-07 10-47-58.png",
+                "assets/icons/Captura de ecrã de 2025-02-07 10-48-25.png",
                 width: iconTabSize,
                 height: iconTabSize,
                 fit: BoxFit.fill,
               ),
               Image.asset(
-                "assets/icons/Captura de ecrã de 2025-02-07 10-47-58.png",
+                "assets/icons/Captura de ecrã de 2025-02-07 10-48-39.png",
                 width: iconTabSize,
                 height: iconTabSize,
                 fit: BoxFit.fill,
