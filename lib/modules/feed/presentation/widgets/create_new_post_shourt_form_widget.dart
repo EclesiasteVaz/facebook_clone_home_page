@@ -10,13 +10,20 @@ class CreateNewPostShourtFormWidget extends StatelessWidget {
     return const ColoredBox(
       color: Colors.white,
       child: ListTile(
-        minTileHeight: 90,
+        minTileHeight: 80,
         leading: CustomCircleAvatar(
           isActive: true,
         ),
         title: TextFieldWidget(),
         trailing: Wrap(
-          children: [Icon(Icons.photo), Text("Foto")],
+          direction: Axis.vertical,
+          children: [
+            Icon(
+              Icons.photo,
+              color: Colors.green,
+            ),
+            Text("Foto"),
+          ],
         ),
       ),
     );
