@@ -32,8 +32,8 @@ class _LegendTextWidgetState extends State<LegendTextWidget> {
           onTap: _seeMoreOrLessTheText,
           child: Text(
             secundText,
-            maxLines: showComplete.value ? null : 2,
-            overflow: showComplete.value ? null : TextOverflow.ellipsis,
+            maxLines: !showComplete.value ? null : 2,
+            overflow: !showComplete.value ? null : TextOverflow.ellipsis,
           ),
         );
       },

@@ -8,6 +8,7 @@ class CardOfTheUserLocalWidget extends StatelessWidget {
     return ColoredBox(
       color: Colors.white,
       child: Stack(
+        fit: StackFit.expand,
         children: [
           SizedBox(
             width: MediaQuery.sizeOf(context).width,
